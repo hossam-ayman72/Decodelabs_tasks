@@ -1,14 +1,17 @@
 
-# Data Cleaning
+**Data Cleaning**
 
-# Problem 1 — Null values in CouponCode
+Problem 1
+Null values in CouponCode
 The original Excel file had missing values in the CouponCode column.
 Orders without a coupon were stored as NaN instead of a meaningful label. 
 Fixed by filling nulls with 'No Coupon' so the column stays usable in groupby operations without distorting counts.
 
-# Problem 2 — Date column stored as string
+Problem 2 
+Date column stored as string
 The Date column was loaded as an object dtype, which blocks any time-series or date-based filtering. 
 Converted to proper datetime format to enable monthly aggregations and trend analysis.
 
-# roblem 3 — No duplicates or missing values elsewhere
+problem 3 
+No duplicates or missing values elsewhere
 Confirmed zero duplicate rows and zero nulls across all other 13 columns — no further cleaning required.
